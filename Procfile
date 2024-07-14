@@ -1,0 +1,1 @@
+web: gunicorn mealtracker.wsgi --log-file -
