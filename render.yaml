@@ -1,0 +1,29 @@
+services:
+  - type: web
+    name: my-django-app
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn mealtracker.wsgi --log-file -
+    envVars:
+      - key: DJANGO_SETTINGS_MODULE
+        value: mealtracker.settings
+      - key: DB_NAME
+        fromDatabase:
+          name: meal_db
+          property: name
+      - key: DB_USER
+        fromDatabase:
+          name: meal_db
+          property: user
+      - key: DB_PASSWORD
+        fromDatabase:
+          name: meal_db
+          property: password
+      - key: DB_HOST
+        fromDatabase:
+          name: meal_db
+          property: host
+      - key: DB_PORT
+        fromDatabase:
+          name: meal_db
+          property: port
