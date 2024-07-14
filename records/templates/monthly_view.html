@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ year }}年{{ month }}月の食事一覧</title>
+    {% load static %}
+    <link href="{% static 'records/css/styles_monthlyview.css' %}" rel="stylesheet">
+</head>
+<body>
+    <h2>{{ year }}年{{ month }}月の食事メニュー一覧</h2>
+
+    <form method="get">
+        {{ form.as_p }}
+        <button type="submit">検索</button>
+    </form>
+
+    <h3>検索結果</h3>
+    
+    <h3>朝食一覧</h3>
+    <ul>
+        {% for record in records %}
+            {% if record.breakfast %}
+                <li>{{ record.date }} 朝食: {{ record.breakfast }}</li>
+            {% endif %}
+        {% empty %}
+            <li>該当する記録はありません。</li>
+        {% endfor %}
+    </ul>
+
+    <h3>昼食一覧</h3>
+    <ul>
+        {% for record in records %}
+            {% if record.lunch %}
+                <li>{{ record.date }} 昼食: {{ record.lunch }}</li>
+            {% endif %}
+        {% empty %}
+            <li>該当する記録はありません。</li>
+        {% endfor %}
+    </ul>
+
+    <h3>夕食一覧</h3>
+    <ul>
+        {% for record in records %}
+            {% if record.dinner %}
+                <li>{{ record.date }} 夕食: {{ record.dinner }}</li>
+            {% endif %}
+        {% empty %}
+            <li>該当する記録はありません。</li>
+        {% endfor %}
+    </ul>
+
+    <h3>間食一覧</h3>
+    <ul>
+        {% for record in records %}
+            {% if record.snack %}
+                <li>{{ record.date }} 間食: {{ record.snack }}</li>
+            {% endif %}
+        {% empty %}
+            <li>該当する記録はありません。</li>
+        {% endfor %}
+    </ul>
+
+    <h3>メモ一覧</h3>
+    <ul>
+        {% for record in records %}
+            {% if record.notes %}
+                <li>{{ record.date }} メモ: {{ record.notes }}</li>
+            {% endif %}
+        {% empty %}
+            <li>該当する記録はありません。</li>
+        {% endfor %}
+    </ul>
+    
+    <a class="button-link" href="{% url 'calendar' %}">カレンダーに戻る</a>
+</body>
+</html>

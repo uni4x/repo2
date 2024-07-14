@@ -1,0 +1,103 @@
+/* 全体のスタイル */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f0f4f8;
+}
+
+h1 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* フォームのスタイル */
+form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* 入力フィールドのスタイル */
+input[type="text"],
+input[type="date"],
+input[type="number"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+/* ラベルのスタイル */
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #34495e;
+}
+
+/* ボタンのスタイル */
+button[type="submit"] {
+    background-color: #27ae60;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #1e8449;
+}
+
+/* リンクのスタイル */
+a {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: #777777;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #525252;
+}
+
+/* エラーメッセージのスタイル（必要に応じて） */
+.errorlist {
+    color: #e74c3c;
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 10px;
+}
+
+
+.button-link {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #27ae60;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin: 5px 0; /* ボタンの間にスペースを追加 */
+}
+.button-link:hover {
+    background-color: #1e8449;
+}

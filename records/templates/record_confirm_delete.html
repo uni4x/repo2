@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>記録削除確認</title>
+    {% load static %}
+    <link href="{% static 'records/css/styles_delete.css' %}" rel="stylesheet">
+</head>
+<body>
+    <h1>⚠️ 確認です</h1>
+    <p>本当にこの記録を削除してもよろしいですか？<br>この操作は取り消せません。</p>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">削除する</button>
+    </form>
+    <br>
+    <a href="{% url 'record_detail' record.pk %}">キャンセル</a>
+</body>
+</html>
+

@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>食事記録カレンダー　食事の記録</title>
+    {% load static %}
+    <link href="{% static 'records/css/styles_detail.css' %}" rel="stylesheet">
+</head>
+<body>
+    <h1>食事の記録</h1>
+    <p data-label="日付:">{{ record.date }}</p>
+    <p data-label="朝食:">{{ record.breakfast }}</p>
+    <p data-label="昼食:">{{ record.lunch }}</p>
+    <p data-label="夕食:">{{ record.dinner }}</p>
+    <p data-label="間食:">{{ record.snack }}</p>
+    <p data-label="体重:">{{ record.weight }}</p>
+    <p data-label="メモ:">{{ record.notes }}</p>
+    <a href="{% url 'record_edit' record.pk %}">編集</a>
+    <a href="{% url 'record_delete' record.pk %}">削除</a>
+    <a href="{% url 'calendar' %}">カレンダーに戻る</a>
+</body>
+</html>

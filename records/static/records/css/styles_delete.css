@@ -1,0 +1,64 @@
+/* 全体のスタイル */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #f8f8f8;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #e74c3c;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+/* ボタンのスタイル */
+button, a {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button {
+    background-color: #e74c3c;
+    color: white;
+}
+
+button:hover {
+    background-color: #c0392b;
+}
+
+a {
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    background-color: #2980b9;
+}
+
+/* アニメーション効果 */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+body {
+    animation: fadeIn 0.5s ease-out;
+}
