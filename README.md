@@ -70,7 +70,7 @@ python manage.py runserver
 	•	DB_HOST: データベースホスト
 	•	DB_PORT: データベースポート
 
-
+# これはポートフォリオです
 
 
 
